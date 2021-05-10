@@ -1,6 +1,6 @@
 import Jiprock from "./data/jiprock-info.js"
 
-//Jiprock sizes and weight
+//Jiprock sizes and weight in kilograms
 let smallJiprock = new Jiprock("3x2", 100);
 
 let mediumJiprock= new Jiprock("4x2", 150);
@@ -11,7 +11,7 @@ let largeJiprock= new Jiprock("6x4", 300);
 
 //Selector 1 for smallest dimension
 let weightOne = smallJiprock.getWeight();
-let seletorOne = '';
+let selectorOne = '';
 selectorWeightTotal();
 
 //Selector 2
@@ -29,4 +29,11 @@ function selectorWeightTotal (weight, howMany) {
 }
 
 //function to calculate jipRock weight based on number selected from dropdown menu
-function calculateWeight ()
+function calculateWeight (JipOne, JipTwo, JipThree, JipN) {
+    let total = JipOne + JipTwo + JipThree + JipN;
+    if (total <= 2000) {
+        return "Safe";
+    } else {
+        return "unsafe";
+    }
+}
