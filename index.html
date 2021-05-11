@@ -4,58 +4,72 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-
+    <!--Jquery CDN Link-->
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous"></script>    
     <title>Jiprock Load</title>
   </head>
-  <body>
-    <h1 class="text-center">Jiprock Weight</h1>
-    <div class="container">
-        <section class="row">
-          
-          <article class="col">
-            Column
-          </article>
-          
-          <article class="col">
-              <form>
-                How many 3x2 Gyprock sheets are in the truck?
-                <input type="number" name="num" min="0" max="200"><br>
-                
-                How many 4x3 Gyprock sheets are in the truck?    
-                <input type="number" name="num" min="0" max="200"><br>
 
-                How many 6x4 Gyprock sheets are in the truck?
-                <input type="number" name="num" min="0" max="200"><br>
-                <input type="submit" value="Submit">
+  <body>
+    <h1 class="text-center">Jiprock Weight</h1>       
+          <article class="container">
+              <form >
+                  <!--Selector 1 Gyprock sheet type-->
+                <p>
+                  What Gyprock board type is being loaded into the truck?
+                </p>
+                <br>
+              <select size="1" id="boardType" title="" name="boardtype">              
+                  <option value="">-Board Type-</option>
+                  <option value="pboard">10MM P/BOARD</option>
+                  <option value="wrboard">10MM W/RBOARD</option>
+                  <option value="unispan">10MM UNISPAN</option>
+                  <option value="villa">10MM VILLA</option>
+              </select>
+              
+              <div class="container">
+                  <div class="pboard">
+                      <select class="second-level-select">
+                          <option value="">-Board Dimensions-</option>
+                          <option value="44">6000x1350</option>
+                          <option value="35">4800x1350</option>
+                          <option value="31">4200x1350</option>
+                          <option value="26">3600x1350</option>
+                          <option value="22">3000x1350</option>
+                      </select>
+                  </div>
+                  <div class="senior-airman">
+                      <select class="second-level-select">
+                          <option value="">-Select Your Rank-</option>
+                          <option value="omber-miner-1">Omber Miner - Level 1</option>
+                          <option value="omber-miner-2">Omber Miner - Level 2</option>
+                      </select>
+                  </div>
+              </div>
+              
+              <div class="second-level-container">
+                  <div class="basic-ore-1">
+                      Line of text for basic ore miner 1
+                  </div>
+                  <div class="basic-ore-2">
+                      Line of text for basic ore miner 2
+                  </div>
+                  <div class="omber-miner-1">
+                      Line of text for omber miner 1
+                  </div>
+                  <div class="omber-miner-2">
+                      Line of text for omber miner 2
+                  </div>    
+              </div>
             </form>
             <p>
                 Total Weight:
             </p>
           </article>
-
-          <article class="col">
-            Column
-          </article>
         </section>
     </div>
-    
-
-
-    
-    
-    <!--Selector 1 for smallest dimension-->
-
-    <!--Selector 2-->
-
-    <!--Selector-->
-
-    <!--Selector nth for largest dimension-->
-    
-    
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script type='text/javascript' src="./assets/index.js" ></script>
   </body>
 </html>

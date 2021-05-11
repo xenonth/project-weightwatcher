@@ -1,4 +1,28 @@
-import Jiprock from "./data/jiprock-info.js"
+$(document).ready(function() {
+    $('#boardType').bind('change', function() {
+        var elements = $('div.container').children().hide(); // hide all the elements
+        var value = $(this).val();
+
+        if (value.length) { // if somethings' selected
+            elements.filter('.' + value).show(); // show the ones we want
+        }
+    }).trigger('change');
+    
+    $('.second-level-select').bind('change', function() {
+        var elements = $('div.second-level-container').children().hide(); // hide all the elements
+        var value = $(this).val();
+
+        if (value.length) { // if somethings' selected
+            elements.filter('.' + value).show(); // show the ones we want
+        }
+    }).trigger('change');
+});
+
+
+
+
+
+/* import Jiprock from "./data/jiprock-info.js"
 
 //Jiprock sizes and weight in kilograms
 let smallJiprock = new Jiprock("3x2", 100);
@@ -28,7 +52,7 @@ function selectorWeightTotal (weight, howMany) {
     }
 }
 
-//function to calculate jipRock weight based on number selected from dropdown menu
+//function to calculate jipRock weight based on number selected from input field value
 function calculateWeight (JipOne, JipTwo, JipThree, JipN) {
     let total = JipOne + JipTwo + JipThree + JipN;
     if (total <= 2000) {
@@ -37,3 +61,4 @@ function calculateWeight (JipOne, JipTwo, JipThree, JipN) {
         return "unsafe";
     }
 }
+*/
