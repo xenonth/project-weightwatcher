@@ -1,0 +1,1 @@
+//Navbar component will result in a list of the different board types and thier thickness
