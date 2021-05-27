@@ -1,14 +1,13 @@
-import logo from './logo.svg';
-import React, { useState } from 'react';
+import React from 'react';
+
+import PBoard from "./components/gyprockButtons/PBoard"
 
 function App() {
-  const [count, setCount] = useState(0);
+  
   return (
-    
-    <button onClick={() => setCount(1)}>
-      Click me!
-      {console.log(count)}
-    </button>
+    <div>
+      <PBoard />
+    </div>
   );
   
 }
