@@ -4,7 +4,7 @@ import { Container, Grid } from "@material-ui/core"
 
 
  
-class PBoard extends React.Component {
+class Unispan extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -32,16 +32,16 @@ class PBoard extends React.Component {
         return (
             <div>
             <Container >
-                <Grid m={2} ></Grid>
-                <Grid xs={12} s={10} m={10} lg={10} className="centralGrid">
-                    <label className="howManySheets" for="howMany">How many P/BOARD sheets?</label>
+                <Grid m={1} ></Grid>
+                <Grid xs={12} m={10} lg={10} className="centralGrid">
+                    <label className="howManySheets" for="howMany">How many UNISPAN sheets?</label>
                     <br></br>
                     <input className="howManySheets" name="howMany" type="Number" min="0" placeholder="How many sheets?" value={this.state.howMany} onChange={this.handleHowMany} />
                     <br></br>
                     <button className="dimension" onClick={() => {
                         
                         this.setState((state) => ({
-                            count: state.count + (44 * this.state.howMany),
+                            count: state.count + (48 * this.state.howMany),
                             sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
                         }));
                     }}>
@@ -51,7 +51,7 @@ class PBoard extends React.Component {
                     <button className="dimension" onClick={() => {
                         
                         this.setState((state) => ({
-                            count: state.count + (35 * this.state.howMany),
+                            count: state.count + (38 * this.state.howMany),
                             sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
                         }));
                     }}>
@@ -60,61 +60,13 @@ class PBoard extends React.Component {
                     <button className="dimension" onClick={() => {
                         
                         this.setState((state) => ({
-                            count: state.count + (31 * this.state.howMany),
-                            sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
-                        }));
-                    }}>
-                        4200x1350
-                    </button>
-                    
-                    <button className="dimension" onClick={() => {
-                        
-                        this.setState((state) => ({
-                            count: state.count + (26 * this.state.howMany),
+                            count: state.count + (29 * this.state.howMany),
                             sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
                         }));
                     }}>
                         3600x1350
                     </button>
-                    <br></br>
-                    <button className="dimension" onClick={() => {
-                        
-                        this.setState((state) => ({
-                            count: state.count + (22 * this.state.howMany),
-                            sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
-                        }));
-                    }}>
-                        3000x1350
-                    </button>
-                    <button className="dimension" onClick={() => {
-                        
-                        this.setState((state) => ({
-                            count: state.count + (39 * this.state.howMany),
-                            sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
-                        }));
-                    }}>
-                        6000x1200
-                    </button>
                     
-                    <button className="dimension" onClick={() => {
-                        
-                        this.setState((state) => ({
-                            count: state.count + (31 * this.state.howMany),
-                            sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
-                        }));
-                    }}>
-                        4800x1200
-                    </button>
-                    <button className="dimension" onClick={() => {
-                        
-                        this.setState((state) => ({
-                            count: state.count + (27 * this.state.howMany),
-                            sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
-                        }));
-                    }}>
-                        4200x1200
-                    </button>
-                    <br></br>
                     <button className="dimension" onClick={() => {
                         
                         this.setState((state) => ({
@@ -122,25 +74,55 @@ class PBoard extends React.Component {
                             sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
                         }));
                     }}>
-                        3600x1200
+                        3000x1350
+                    </button>
+                    <br></br>
+                    <button className="dimension" onClick={() => {
+                        
+                        this.setState((state) => ({
+                            count: state.count + (43 * this.state.howMany),
+                            sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
+                        }));
+                    }}>
+                        6000x1200
                     </button>
                     <button className="dimension" onClick={() => {
                         
                         this.setState((state) => ({
-                            count: state.count + (20 * this.state.howMany),
+                            count: state.count + (34 * this.state.howMany),
+                            sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
+                        }));
+                    }}>
+                        4800x1200
+                    </button>
+                    
+                    <button className="dimension" onClick={() => {
+                        
+                        this.setState((state) => ({
+                            count: state.count + (30 * this.state.howMany),
+                            sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
+                        }));
+                    }}>
+                        4200x1200
+                    </button>
+                    <button className="dimension" onClick={() => {
+                        
+                        this.setState((state) => ({
+                            count: state.count + (26 * this.state.howMany),
+                            sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
+                        }));
+                    }}>
+                        3600x1200
+                    </button>
+                    <br></br>
+                    <button className="dimension" onClick={() => {
+                        
+                        this.setState((state) => ({
+                            count: state.count + (21 * this.state.howMany),
                             sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
                         }));
                     }}>
                         3000x1200
-                    </button>
-                    <button className="dimension" onClick={() => {
-                        
-                        this.setState((state) => ({
-                            count: state.count + (16 * this.state.howMany),
-                            sheetsLoaded: state.sheetsLoaded + (1 * this.state.howMany)
-                        }));
-                    }}>
-                        2400x1200
                     </button>
                     <button className="reset" onClick={() => {this.setState({count: 0, sheetsLoaded: 0})}}>
                         RESET
@@ -150,7 +132,7 @@ class PBoard extends React.Component {
                         Total Weight: {this.state.count} kg
                     </p>
                     <p className="answer">
-                        {this.state.sheetsLoaded} P/BOARD sheets counted.
+                        {this.state.sheetsLoaded} 10MM UNISPAN sheets counted.
                     </p>
                 </Grid>
                 <Grid></Grid>
@@ -160,4 +142,4 @@ class PBoard extends React.Component {
     }
 }
 
-export default PBoard;
+export default Unispan;
