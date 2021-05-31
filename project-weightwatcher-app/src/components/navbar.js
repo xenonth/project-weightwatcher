@@ -25,7 +25,12 @@ const headersData = [
   {
     label: "VILLA",
     href: "/villa",
+    
   },
+  {
+    label: "HOME",
+    href: "/home",
+  }
 ];
 
 //Materials UI layout

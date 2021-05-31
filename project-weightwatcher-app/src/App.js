@@ -10,12 +10,15 @@ import PBoard from "./components/gyprockButtons/PBoard"
 import WRBoard from "./components/gyprockButtons/WRBoard"
 import Unispan from './components/gyprockButtons/Unispan';
 import Villa from './components/gyprockButtons/Villa';
+import Home from "./components/Home";
 
 function App() {
   
   return (
     <Router>
       <Header />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/home" component={Home} />
         <Route exact path="/pboard" component={PBoard}/>
         <Route exact path="/wrboard" component={WRBoard}/>
         <Route exact path="/unispan" component={Unispan}/>
