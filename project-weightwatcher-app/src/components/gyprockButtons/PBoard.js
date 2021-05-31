@@ -1,6 +1,9 @@
 import React from "react";
-//import gypRockTypes from "./data/GypRock";
 
+import { Container, Grid } from "@material-ui/core"
+
+
+ 
 class PBoard extends React.Component {
     constructor(props) {
         super(props);
@@ -29,11 +32,14 @@ class PBoard extends React.Component {
         
         return (
             <div>
-                <input name="howMany" type="Number" placeholder="How many sheets?" value={this.state.howMany} onChange={this.handleHowMany} />
+            <Container >
+                <Grid m={2} ></Grid>
+                <Grid xs={12} s={10} m={10} lg={10} className="centralGrid">
+                <label className="howManySheets" for="howMany">How many sheets?</label>
                 <br></br>
-                <input name="truckWeight" type="Number" placeholder="Truck Weight?" value={this.state.truckWeight} onChange={this.handleTruck} />
+                <input className="howManySheets" name="howMany" type="Number" placeholder="How many sheets?" value={this.state.howMany} onChange={this.handleHowMany} />
                 <br></br>
-                <button onClick={() => {
+                <button className="dimension" onClick={() => {
                     
                     this.setState((state) => ({
                         count: state.count + (44 * this.state.howMany),
@@ -43,7 +49,7 @@ class PBoard extends React.Component {
                     6000x1350
                 </button>
 
-                <button onClick={() => {
+                <button className="dimension" onClick={() => {
                     
                     this.setState((state) => ({
                         count: state.count + (35 * this.state.howMany),
@@ -52,7 +58,7 @@ class PBoard extends React.Component {
                 }}>
                     4800x1350
                 </button>
-                <button onClick={() => {
+                <button className="dimension" onClick={() => {
                     
                     this.setState((state) => ({
                         count: state.count + (31 * this.state.howMany),
@@ -61,7 +67,7 @@ class PBoard extends React.Component {
                 }}>
                     4200x1350
                 </button>
-                <button onClick={() => {
+                <button className="dimension" onClick={() => {
                     
                     this.setState((state) => ({
                         count: state.count + (26 * this.state.howMany),
@@ -70,7 +76,7 @@ class PBoard extends React.Component {
                 }}>
                     3600x1350
                 </button>
-                <button onClick={() => {
+                <button className="dimension" onClick={() => {
                     
                     this.setState((state) => ({
                         count: state.count + (22 * this.state.howMany),
@@ -79,7 +85,7 @@ class PBoard extends React.Component {
                 }}>
                     3000x1350
                 </button>
-                <button onClick={() => {
+                <button className="dimension" onClick={() => {
                     
                     this.setState((state) => ({
                         count: state.count + (39 * this.state.howMany),
@@ -88,7 +94,7 @@ class PBoard extends React.Component {
                 }}>
                     6000x1200
                 </button>
-                <button onClick={() => {
+                <button className="dimension" onClick={() => {
                     
                     this.setState((state) => ({
                         count: state.count + (31 * this.state.howMany),
@@ -97,7 +103,7 @@ class PBoard extends React.Component {
                 }}>
                     4800x1200
                 </button>
-                <button onClick={() => {
+                <button className="dimension" onClick={() => {
                     
                     this.setState((state) => ({
                         count: state.count + (27 * this.state.howMany),
@@ -106,7 +112,7 @@ class PBoard extends React.Component {
                 }}>
                     4200x1200
                 </button>
-                <button onClick={() => {
+                <button className="dimension" onClick={() => {
                     
                     this.setState((state) => ({
                         count: state.count + (24 * this.state.howMany),
@@ -115,7 +121,7 @@ class PBoard extends React.Component {
                 }}>
                     3600x1200
                 </button>
-                <button onClick={() => {
+                <button className="dimension" onClick={() => {
                     
                     this.setState((state) => ({
                         count: state.count + (20 * this.state.howMany),
@@ -124,7 +130,7 @@ class PBoard extends React.Component {
                 }}>
                     3000x1200
                 </button>
-                <button onClick={() => {
+                <button className="dimension" onClick={() => {
                     
                     this.setState((state) => ({
                         count: state.count + (16 * this.state.howMany),
@@ -133,7 +139,7 @@ class PBoard extends React.Component {
                 }}>
                     2400x1200
                 </button>
-                <button onClick={() => {this.setState({count: 0, sheetsLoaded: 0})}}>
+                <button className="reset" onClick={() => {this.setState({count: 0, sheetsLoaded: 0})}}>
                     RESET
                 </button>
                 <p>
@@ -144,7 +150,9 @@ class PBoard extends React.Component {
                     <br></br>
                     {this.state.message}
                 </p>
-
+                </Grid>
+                <Grid></Grid>
+                </Container>
             </div>
         )
     }

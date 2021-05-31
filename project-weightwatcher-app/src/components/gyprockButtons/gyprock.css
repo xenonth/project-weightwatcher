@@ -1,0 +1,32 @@
+.dimension {
+    margin: 1%;
+    background-color: lightsteelblue;
+    color: black;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+}
+
+.howManySheets {
+    margin: 1%;   
+}
+
+.centralGrid {
+    text-align: center;
+}
+
+.buttonRowOne {
+    margin: 3px;
+
+} 
+
+.reset {
+    margin: 1%;
+    background-color: #990000;
+    color:aliceblue;
+    width: 50px;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+}
